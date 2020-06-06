@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Andrey Loskutov Eclipse plugins update site" url="https://raw.githubusercontent.com/iloveeclipse/plugins/latest/">
+      Andrey Loskutov Eclipse plugins update site
+   </description>
+   <feature url="features/JDepend4Eclipse_1.2.4.201406241900.jar" id="JDepend4Eclipse" version="1.2.4.201406241900">
+      <category name="Andrey_Loskutov_plugins"/>
+   </feature>
+   <feature url="features/FileSync_1.3.9.201406241900.jar" id="FileSync" version="1.3.9.201406241900">
+      <category name="Andrey_Loskutov_plugins"/>
+   </feature>
+   <feature url="features/AnyEditTools_2.7.2.201911221520.jar" id="AnyEditTools" version="2.7.2.201911221520">
+      <category name="Andrey_Loskutov_plugins"/>
+   </feature>
+   <feature url="features/org.eclipselabs.plugindependencies_1.2.0.201903291132.jar" id="org.eclipselabs.plugindependencies" version="1.2.0.201903291132">
+      <category name="Andrey_Loskutov_plugins"/>
+   </feature>
+   <feature url="features/DataHierarchy_1.0.3.201702120923.jar" id="DataHierarchy" version="1.0.3.201702120923">
+      <category name="Andrey_Loskutov_plugins"/>
+   </feature>
+   <feature url="features/org.eclipse.jdt.bcoview.feature_1.0.0.201901132101-8614914.jar" id="org.eclipse.jdt.bcoview.feature" version="1.0.0.201901132101-8614914">
+      <category name="Andrey_Loskutov_plugins"/>
+   </feature>
+   <feature url="features/zipeditor_1.1.6.201904150828.jar" id="zipeditor" version="1.1.6.201904150828"/>
+   <feature url="features/com.cr.lockness.Lockness.feature_3.1.1.jar" id="com.cr.lockness.Lockness.feature" version="3.1.1"/>
+   <archive path="plugins/org.eclipselabs.plugindependencies.core_1.2.0.jar" url="https://github.com/iloveeclipse/plugindependencies/releases/download/1.2.0.201903291132/org.eclipselabs.plugindependencies.core_1.2.0.jar"/>
+   <archive path="plugins/org.eclipselabs.plugindependencies.ui_1.2.0.201903291132.jar" url="https://github.com/iloveeclipse/plugindependencies/releases/download/1.2.0.201903291132/org.eclipselabs.plugindependencies.ui_1.2.0.201903291132.jar"/>
+   <archive path="plugins/org.eclipse.jdt.bcoview_1.0.0.201901132101-8614914.jar" url="https://github.com/iloveeclipse/bytecodeoutline/releases/download/1.0.0_alpha/org.eclipse.jdt.bcoview_1.0.0.201901132101-8614914.jar"/>
+   <archive path="plugins/de.loskutov.eclipse.jdepend_1.2.4.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.eclipse.jdepend_1.2.4.201406241900.jar"/>
+   <archive path="plugins/de.loskutov.FileSync_1.3.9.201406241900.jar" url="http://dl.bintray.com/iloveeclipse/plugins/de.loskutov.FileSync_1.3.9.201406241900.jar"/>
+   <archive path="plugins/de.loskutov.DataHierarchy_1.0.3.201702120923.jar" url="https://github.com/iloveeclipse/datahierarchy/releases/download/1.0.3/de.loskutov.DataHierarchy_1.0.3.201702120923.jar"/>
+   <archive path="plugins/de.loskutov.anyedit.AnyEditTools_2.7.2.201911221520.jar" url="https://github.com/iloveeclipse/anyedittools/releases/download/2.7.2/de.loskutov.anyedit.AnyEditTools_2.7.2.201911221520.jar"/>
+   <archive path="plugins/ZipEditor_1.1.6.201904150828.jar" url="http://zipeditor.sourceforge.net/update/plugins/ZipEditor_1.1.6.201904150828.jar"/>
+   <category-def name="Andrey_Loskutov_plugins" label="Eclipse plugins provided by Andrey Loskutov">
+      <description>
+         Eclipse plugins provided by Andrey Loskutov. More info at https://github.com/iloveeclipse/plugins/wiki
+      </description>
+   </category-def>
+</site>
