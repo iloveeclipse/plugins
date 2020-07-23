@@ -12,7 +12,7 @@
    <feature url="features/AnyEditTools_2.7.2.202006062100.jar" id="AnyEditTools" version="2.7.2.202006062100">
       <category name="Andrey_Loskutov_plugins"/>
    </feature>
-   <feature url="features/org.eclipselabs.plugindependencies_1.2.0.202006062100.jar" id="org.eclipselabs.plugindependencies" version="1.2.0.202006062100">
+   <feature url="features/org.eclipselabs.plugindependencies_1.3.0.202007221817.jar" id="org.eclipselabs.plugindependencies" version="1.3.0.202007221817">
       <category name="Andrey_Loskutov_plugins"/>
    </feature>
    <feature url="features/DataHierarchy_1.0.3.202006062100.jar" id="DataHierarchy" version="1.0.3.202006062100">
