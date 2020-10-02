@@ -23,7 +23,7 @@
    </feature>
    <feature url="features/zipeditor_1.1.6.201904150828.jar" id="zipeditor" version="1.1.6.201904150828"/>
    <feature url="features/com.cr.lockness.Lockness.feature_3.1.1.jar" id="com.cr.lockness.Lockness.feature" version="3.1.1"/>
-   <archive path="plugins/ZipEditor_1.1.6.201904150828.jar" url="http://zipeditor.sourceforge.net/update/plugins/ZipEditor_1.1.6.201904150828.jar"/>
+   <archive path="plugins/ZipEditor_1.1.8.202010020827.jar" url="http://zipeditor.sourceforge.net/update/plugins/ZipEditor_1.1.8.202010020827.jar"/>
    <category-def name="Andrey_Loskutov_plugins" label="Eclipse plugins provided by Andrey Loskutov">
       <description>
          Eclipse plugins provided by Andrey Loskutov. More info at https://github.com/iloveeclipse/plugins/wiki
