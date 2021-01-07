@@ -1,0 +1,114 @@
+<!-- http://www.lorenzobettini.it/2012/12/mirror-eclipse-repositories-from-eclipse/ -->
+<project name="Create repo" default="create-mirror" basedir=".">
+  <property name="target.dir" value="${basedir}/published_update_site"/>
+  <property name="source.dir" value="${basedir}"/>
+
+  <target name="create-mirror">
+    <echo>source = ${source.dir}</echo>
+    <echo>target = ${target.dir}</echo>
+
+  	<delete dir="${target.dir}" />
+  	<mkdir dir="${target.dir}" />
+  	
+  	<!--
+  	<copy todir="${target.dir}/plugins" failonerror="true" overwrite="true">
+		<fileset dir="${basedir}/plugins" />
+	</copy>
+  	<copy todir="${target.dir}/features" failonerror="true" overwrite="true">
+		<fileset dir="${basedir}/features" />
+	</copy>
+  	<copy todir="${target.dir}" failonerror="true" overwrite="true">
+		<fileset dir="${basedir}">
+    			<include name="site.xml"/>
+		</fileset>
+	</copy>
+    -->	
+  	
+    	<!--
+    <p2.publish.featuresAndBundles
+       repository="file:///${target.dir}"
+       source="file:///${target.dir}"
+       compress="false"
+      >
+    </p2.publish.featuresAndBundles>
+  	
+        <contextrepository location="file:///${source.dir}" artifact="true" metadata="true"/>
+        -->
+
+    <!-- Use a fileset include to avoid hard-coding
+         the equinox launcher jar filename -->
+    <pathconvert property="launcher.jar">
+        <fileset dir="${eclipse.home}/plugins/">
+            <include name="org.eclipse.equinox.launcher_*.jar" />
+        </fileset>
+    </pathconvert>
+    <echo message="Using Equinox launcher: ${launcher.jar}"/>
+<!--
+    <p2.mirror verbose="true" compress="false">
+      <destination location="${target.dir}"  />
+      <slicingOptions latestVersionOnly="true" includeOptional="true" platformFilter="linux,gtk,x86_64"/>
+      <source>
+          <repository location="http://zipeditor.sourceforge.net/update"/>
+      </source>
+    </p2.mirror>
+-->
+    <exec executable="java">
+        <arg value="-jar" />
+        <arg value="${launcher.jar}" />
+        <arg value="-console" />
+        <arg value="-noSplash" />
+        <arg value="--launcher.suppressErrors" />
+        <arg value="-consolelog" />
+        <arg value="-application" />
+        <arg value="org.eclipse.equinox.p2.publisher.UpdateSitePublisher" />
+        <arg value="-configuration" />
+        <arg value="file:${basedir}/.eclipse" />
+    	<arg value="-metadataRepository" />
+    	<arg value="file:${target.dir}" />
+    	<arg value="-metadataRepositoryName" />
+    	<arg value="Andrey_Loskutov_plugins" />
+    	<arg value="-artifactRepository" />
+    	<arg value="file:${target.dir}" />
+    	<arg value="-artifactRepositoryName" />
+    	<arg value="Andrey_Loskutov_plugins" />
+    	<arg value="-source" />
+    	<arg value="${source.dir}" />
+    	<arg value="-configs" />
+    	<arg value="gtk.linux.x86_64" />
+    	<arg value="-append" />
+    	<arg value="false" />
+    </exec>
+
+  	<copy todir="${source.dir}" failonerror="true" overwrite="true">
+		<fileset dir="${target.dir}">
+    		<include name="artifacts.xml"/>
+    		<include name="content.xml"/>
+		</fileset>
+	</copy>
+  	
+  	<delete dir="${source.dir}/p2" />
+  	<delete dir="${source.dir}/.eclipse" />
+  	<delete dir="${source.dir}/target.dir" />
+<!--
+  
+  	<p2.composite.repository>
+  	  <repository location="file:/${target.dir}" name="A new repository" />
+  	  <add>
+  	    <repository location="http://zipeditor.sourceforge.net/update" kind="M" />
+  	  </add>
+  	</p2.composite.repository>
+  	
+  	
+    <p2.mirror verbose="true" compress="false">
+      <destination location="${target.dir}"  />
+      <slicingOptions latestVersionOnly="true" includeOptional="true" platformFilter="linux,gtk,x86_64"/>
+      <source>
+          <repository location="file:///${source.dir}/"/>
+          <repository location="http://zipeditor.sourceforge.net/update"/>
+      </source>
+
+    </p2.mirror>
+-->
+  </target>
+
+</project>

@@ -21,9 +21,7 @@
    <feature url="features/org.eclipse.jdt.bcoview.feature_1.0.1.202006062100.jar" id="org.eclipse.jdt.bcoview.feature" version="1.0.1.202006062100">
       <category name="Andrey_Loskutov_plugins"/>
    </feature>
-   <feature url="features/zipeditor_1.1.8.202010020827.jar" id="zipeditor" version="1.1.8.202010020827"/>
    <feature url="features/com.cr.lockness.Lockness.feature_3.1.1.jar" id="com.cr.lockness.Lockness.feature" version="3.1.1"/>
-   <archive path="plugins/ZipEditor_1.1.8.202010020827.jar" url="http://zipeditor.sourceforge.net/update/plugins/ZipEditor_1.1.8.202010020827.jar"/>
    <category-def name="Andrey_Loskutov_plugins" label="Eclipse plugins provided by Andrey Loskutov">
       <description>
          Eclipse plugins provided by Andrey Loskutov. More info at https://github.com/iloveeclipse/plugins/wiki

@@ -25,11 +25,11 @@ fi
 echo -e "rootdir: ${rootdir}"
 
 # The actual path to the update site
-src="${rootdir}/"
+src="${rootdir}/.."
 
 # Put only the really required plugins onto the published update site. But skip
 # old ones.
-trg="${rootdir}/published_update_site"
+trg="${rootdir}/../published_update_site"
 
 echo -e "Update site src=${src}"
 echo -e "Published site=${trg}"
@@ -80,6 +80,7 @@ ${eclipse} -noSplash --launcher.suppressErrors -consoleLog \
    -configuration file:${rootdir}/.eclipse \
    -metadataRepository file:${trg} \
    -metadataRepositoryName Andrey_Loskutov_plugins \
+   -metadataRepositoryName zip_editor \
    -artifactRepository file:${trg} \
    -artifactRepositoryName Andrey_Loskutov_plugins \
    -source ${trg} \
@@ -97,8 +98,8 @@ then
   rm -rf ${trg}/plugins
   rm -rf ${trg}/binary
   
-  rm -rf ${src}/p2
-  rm -rf ${src}/.eclipse
+  rm -rf ${rootdir}/p2
+  rm -rf ${rootdir}/.eclipse
   
   rm -rf ${src}/content.*
   rm -rf ${src}/artifacts.*

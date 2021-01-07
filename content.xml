@@ -2,18 +2,16 @@
 <?metadataRepository version='1.2.0'?>
 <repository name='Andrey_Loskutov_plugins' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1610015573628'/>
+    <property name='p2.timestamp' value='1610031526978'/>
     <property name='p2.compressed' value='false'/>
   </properties>
-  <references size='6'>
+  <references size='4'>
     <repository uri='https://raw.githubusercontent.com/iloveeclipse/plugins/latest/' url='https://raw.githubusercontent.com/iloveeclipse/plugins/latest/' type='1' options='0'/>
     <repository uri='https://raw.githubusercontent.com/iloveeclipse/plugins/latest/' url='https://raw.githubusercontent.com/iloveeclipse/plugins/latest/' type='0' options='0'/>
-    <repository uri='http://zipeditor.sourceforge.net/update' url='http://zipeditor.sourceforge.net/update' type='0' options='0'/>
-    <repository uri='http://zipeditor.sourceforge.net/update' url='http://zipeditor.sourceforge.net/update' type='1' options='0'/>
     <repository uri='http://andrei.gmxhome.de/eclipse/' url='http://andrei.gmxhome.de/eclipse/' type='1' options='0'/>
     <repository uri='http://andrei.gmxhome.de/eclipse/' url='http://andrei.gmxhome.de/eclipse/' type='0' options='0'/>
   </references>
-  <units size='26'>
+  <units size='24'>
     <unit id='com.cr.lockness.Lockness.feature.feature.group' version='3.1.1' singleton='false'>
       <update id='com.cr.lockness.Lockness.feature.feature.group' range='[0.0.0,3.1.1)' severity='0'/>
       <properties size='5'>
@@ -75,7 +73,11 @@
         <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
       </provides>
       <requires size='1'>
-        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            org.eclipselabs.plugindependencies.core
+          </description>
+        </requiredProperties>
       </requires>
       <artifacts size='1'>
         <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.core' version='1.3.0'/>
@@ -124,6 +126,142 @@
       <copyright uri='..' url='..'>
         Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
       </copyright>
+    </unit>
+    <unit id='AnyEditTools.feature.jar' version='2.7.2.202006062100'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='AnyEditTools'/>
+        <property name='org.eclipse.equinox.p2.description' value='Adds useful context menu actions to text files and editors - Open file, type under&#xA;      cursor, Convert tabs to spaces, case, html, base64, unicode, Compare/Replace with&#xA;      clipboard or external files etc. AnyEdit can remove trailing whitespace and/or&#xA;      convert tabs-spaces on save and contributes Import/Export working sets wizards.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://andrei.gmxhome.de/anyedit/index.html'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.update.feature.plugin' value='de.loskutov.anyedit.AnyEditTools'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='AnyEditTools.feature.jar' version='2.7.2.202006062100'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='AnyEditTools' version='2.7.2.202006062100'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='AnyEditTools' version='2.7.2.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100' generation='2'>
+      <update id='de.loskutov.eclipse.jdepend' range='[0.0.0,1.2.4.202006062100)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='JDepend4Eclipse'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+      </properties>
+      <provides size='7'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'/>
+        <provided namespace='osgi.bundle' name='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'/>
+        <provided namespace='java.package' name='jdepend.framework' version='0.0.0'/>
+        <provided namespace='java.package' name='jdepend.textui' version='0.0.0'/>
+        <provided namespace='java.package' name='jdepend.xmlui' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='12'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.swt' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            de.loskutov.eclipse.jdepend
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: de.loskutov.eclipse.jdepend; singleton:=true&#xA;Bundle-Version: 1.2.4.202006062100&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817' generation='2'>
+      <update id='org.eclipselabs.plugindependencies.ui' range='[0.0.0,1.3.0.202007221817)' severity='0'/>
+      <properties size='4'>
+        <property name='df_LT.Bundle-Name' value='Plug-in Dependencies Explorer'/>
+        <property name='df_LT.Vendor' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%Vendor'/>
+      </properties>
+      <provides size='9'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817'/>
+        <provided namespace='osgi.bundle' name='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817'/>
+        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui.adapter' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui.console' version='0.0.0'/>
+        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui.view' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='10'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.8.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.pde.core' range='3.8.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.equinox.frameworkadmin' range='2.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipselabs.plugindependencies.core' range='1.0.5'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            org.eclipselabs.plugindependencies.ui
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipselabs.plugindependencies.ui;singleton:=true&#xA;Bundle-Version: 1.3.0.202007221817&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
     </unit>
     <unit id='AnyEditTools.feature.group' version='2.7.2.202006062100' singleton='false'>
       <update id='AnyEditTools.feature.group' range='[0.0.0,2.7.2.202006062100)' severity='0'/>
@@ -268,7 +406,11 @@
         <required namespace='osgi.bundle' name='org.eclipse.search' range='0.0.0'/>
         <required namespace='osgi.bundle' name='org.eclipse.ui.navigator' range='0.0.0'/>
         <required namespace='osgi.bundle' name='org.eclipse.core.net' range='0.0.0'/>
-        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            de.loskutov.DataHierarchy
+          </description>
+        </requiredProperties>
       </requires>
       <artifacts size='1'>
         <artifact classifier='osgi.bundle' id='de.loskutov.DataHierarchy' version='1.0.3.202006062100'/>
@@ -321,6 +463,104 @@
       <copyright uri='..' url='..'>
         Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
       </copyright>
+    </unit>
+    <unit id='org.eclipselabs.plugindependencies.feature.jar' version='1.3.0.202101071002'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Plugin Dependencies Explorer'/>
+        <property name='org.eclipse.equinox.p2.description' value='Project provides both command line and Eclipse UI for static package, plugin and feature dependencies analysis (the dependencies are read from MANIFEST.MF and feature.xml files).'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/plugindependencies/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.update.feature.plugin' value='org.eclipselabs.plugindependencies.ui'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.jar' version='1.3.0.202101071002'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.eclipselabs.plugindependencies' version='1.3.0.202101071002'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.eclipselabs.plugindependencies' version='1.3.0.202101071002'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='de.loskutov.FileSync' version='1.3.10.202006062100' generation='2'>
+      <update id='de.loskutov.FileSync' range='[0.0.0,1.3.10.202006062100)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='FileSync Plug-in'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+      </properties>
+      <provides size='11'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.FileSync' version='1.3.10.202006062100'/>
+        <provided namespace='osgi.bundle' name='de.loskutov.FileSync' version='1.3.10.202006062100'/>
+        <provided namespace='java.package' name='de.loskutov.fs' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.builder' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.command' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.dialogs' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.preferences' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.fs.properties' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='de.loskutov.FileSync' version='1.3.10.202006062100'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='7'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.6.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.net' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.variables' range='0.0.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            de.loskutov.FileSync
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='de.loskutov.FileSync' version='1.3.10.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: de.loskutov.FileSync;singleton:=true&#xA;Bundle-Version: 1.3.10.202006062100&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/data/git/plugins/site.xml.Default' version='1.0.0.611cIzdM6'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Uncategorized'/>
+        <property name='org.eclipse.equinox.p2.description' value='Default category for otherwise uncategorized features'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/data/git/plugins/site.xml.Default' version='1.0.0.611cIzdM6'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.cr.lockness.Lockness.feature.feature.group' range='[3.1.1,3.1.1]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
     </unit>
     <unit id='JDepend4Eclipse.feature.jar' version='1.2.4.202006062100'>
       <properties size='5'>
@@ -394,41 +634,24 @@
         Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
       </copyright>
     </unit>
-    <unit id='zipeditor.feature.group' version='1.1.8.202010020827' singleton='false'>
-      <update id='zipeditor.feature.group' range='[0.0.0,1.1.8.202010020827)' severity='0'/>
-      <properties size='10'>
-        <property name='org.eclipse.equinox.p2.name' value='%featureName'/>
-        <property name='org.eclipse.equinox.p2.description' value='%description'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='%descriptionUrl'/>
-        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
-        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
-        <property name='df_LT.license' value='THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS &#xA;COMMON PUBLIC LICENSE (&quot;AGREEMENT&quot;). ANY USE, REPRODUCTION OR &#xA;DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT&apos;S ACCEPTANCE &#xA;OF THIS AGREEMENT. &#xA;1. DEFINITIONS &#xA;&quot;Contribution&quot; means: &#xA;a) in the case of the initial Contributor, the initial code and &#xA;documentation distributed under this Agreement, and &#xA;b) in the case of each subsequent Contributor: &#xA;i) changes to the Program, and &#xA;ii) additions to the Program; &#xA;where such changes and/or additions to the Program originate &#xA;from and are distributed by that particular Contributor. A Contribution &#xA;&apos;originates&apos; from a Contributor if it was added to the Program &#xA;by such Contributor itself or anyone acting on such Contributor&apos;s &#xA;behalf. Contributions do not include additions to the Program &#xA;which:(i) are separate modules of software distributed in conjunction &#xA;with the Program under their own license agreement, and (ii) &#xA;are not derivative works of the Program. &#xA;&quot;Contributor&quot; means any person or entity that distributes the &#xA;Program. &#xA;&quot;Licensed Patents &quot; mean patent claims licensable by a Contributor &#xA;which are necessarily infringed by the use or sale of its Contribution &#xA;alone or when combined with the Program. &#xA;&quot;Program&quot; means the Contributions distributed in accordance with &#xA;this Agreement. &#xA;&quot;Recipient&quot; means anyone who receives the Program under this &#xA;Agreement, including all Contributors. &#xA;2. GRANT OF RIGHTS &#xA;a) Subject to the terms of this Agreement, each Contributor hereby &#xA;grants Recipient a non-exclusive, worldwide, royalty-free copyright &#xA;license to reproduce, prepare derivative works of, publicly display, &#xA;publicly perform, distribute and sublicense the Contribution &#xA;of such Contributor, if any, and such derivative works, in source &#xA;code and object code form. &#xA;b) Subject to the terms of this Agreement, each Contributor hereby &#xA;grants Recipient a non-exclusive, worldwide, royalty-free patent &#xA;license under Licensed Patents to make, use, sell, offer to sell, &#xA;import and otherwise transfer the Contribution of such Contributor, &#xA;if any, in source code and object code form. This patent license &#xA;shall apply to the combination of the Contribution and the Program &#xA;if, at the time the Contribution is added by the Contributor, &#xA;such addition of the Contribution causes such combination to &#xA;be covered by the Licensed Patents. The patent license shall &#xA;not apply to any other combinations which include the Contribution. &#xA;No hardware per se is licensed hereunder. &#xA;c) Recipient understands that although each Contributor grants &#xA;the licenses to its Contributions set forth herein, no assurances &#xA;are provided by any Contributor that the Program does not infringe &#xA;the patent or other intellectual property rights of any other &#xA;entity. Each Contributor disclaims any liability to Recipient &#xA;for claims brought by any other entity based on infringement &#xA;of intellectual property rights or otherwise. As a condition &#xA;to exercising the rights and licenses granted hereunder, each &#xA;Recipient hereby assumes sole responsibility to secure any other &#xA;intellectual property rights needed, if any. For example, if &#xA;a third party patent license is required to allow Recipient to &#xA;distribute the Program, it is Recipient&apos;s responsibility to acquire &#xA;that license before distributing the Program. &#xA;d) Each Contributor represents that to its knowledge it has sufficient &#xA;copyright rights in its Contribution, if any, to grant the copyright &#xA;license set forth in this Agreement. &#xA;3. REQUIREMENTS &#xA;A Contributor may choose to distribute the Program in object &#xA;code form under its own license agreement, provided that: &#xA;a) it complies with the terms and conditions of this Agreement; &#xA;and &#xA;b) its license agreement: &#xA;i) effectively disclaims on behalf of all Contributors all warranties &#xA;and conditions, express and implied, including warranties or &#xA;conditions of title and non-infringement, and implied warranties &#xA;or conditions of merchantability and fitness for a particular &#xA;purpose; &#xA;ii) effectively excludes on behalf of all Contributors all liability &#xA;for damages, including direct, indirect, special, incidental &#xA;and consequential damages, such as lost profits; &#xA;iii) states that any provisions which differ from this Agreement &#xA;are offered by that Contributor alone and not by any other party; &#xA;and &#xA;iv) states that source code for the Program is available from &#xA;such Contributor, and informs licensees how to obtain it in a &#xA;reasonable manner on or through a medium customarily used for &#xA;software exchange. &#xA;When the Program is made available in source code form: &#xA;a) it must be made available under this Agreement; and &#xA;b) a copy of this Agreement must be included with each copy of &#xA;the Program. &#xA;Contributors may not remove or alter any copyright notices contained &#xA;within the Program. &#xA;Each Contributor must identify itself as the originator of its &#xA;Contribution, if any, in a manner that reasonably allows subsequent &#xA;Recipients to identify the originator of the Contribution. &#xA;4. COMMERCIAL DISTRIBUTION &#xA;Commercial distributors of software may accept certain responsibilities &#xA;with respect to end users, business partners and the like. While &#xA;this license is intended to facilitate the commercial use of &#xA;the Program, the Contributor who includes the Program in a commercial &#xA;product offering should do so in a manner which does not create &#xA;potential liability for other Contributors. Therefore, if a Contributor &#xA;includes the Program in a commercial product offering, such Contributor &#xA;(&quot;Commercial Contributor&quot;) hereby agrees to defend and indemnify &#xA;every other Contributor (&quot;Indemnified Contributor&quot;) against any &#xA;losses, damages and costs (collectively &quot;Losses&quot;) arising from &#xA;claims, lawsuits and other legal actions brought by a third party &#xA;against the Indemnified Contributor to the extent caused by the &#xA;acts or omissions of such Commercial Contributor in connection &#xA;with its distribution of the Program in a commercial product &#xA;offering. The obligations in this section do not apply to any &#xA;claims or Losses relating to any actual or alleged intellectual &#xA;property infringement. In order to qualify, an Indemnified Contributor &#xA;must: a) promptly notify the Commercial Contributor in writing &#xA;of such claim, and b) allow the Commercial Contributor to control, &#xA;and cooperate with the Commercial Contributor in, the defense &#xA;and any related settlement negotiations. The Indemnified Contributor &#xA;may participate in any such claim at its own expense. &#xA;For example, a Contributor might include the Program in a commercial &#xA;product offering, Product X. That Contributor is then a Commercial &#xA;Contributor. If that Commercial Contributor then makes performance &#xA;claims, or offers warranties related to Product X, those performance &#xA;claims and warranties are such Commercial Contributor&apos;s responsibility &#xA;alone. Under this section, the Commercial Contributor would have &#xA;to defend claims against the other Contributors related to those &#xA;performance claims and warranties, and if a court requires any &#xA;other Contributor to pay any damages as a result, the Commercial &#xA;Contributor must pay those damages. &#xA;5. NO WARRANTY &#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM &#xA;IS PROVIDED ON AN &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS &#xA;OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, &#xA;ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY &#xA;OR FITNESS FOR A PARTICULAR PURPOSE. Each Recipient is solely &#xA;responsible for determining the appropriateness of using and &#xA;distributing the Program and assumes all risks associated with &#xA;its exercise of rights under this Agreement, including but not &#xA;limited to the risks and costs of program errors, compliance &#xA;with applicable laws, damage to or loss of data, programs or &#xA;equipment, and unavailability or interruption of operations. &#xA;6. DISCLAIMER OF LIABILITY &#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT &#xA;NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT, &#xA;INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES &#xA;(INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED AND &#xA;ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, &#xA;OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY &#xA;OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE EXERCISE &#xA;OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY &#xA;OF SUCH DAMAGES. &#xA;7. GENERAL &#xA;If any provision of this Agreement is invalid or unenforceable &#xA;under applicable law, it shall not affect the validity or enforceability &#xA;of the remainder of the terms of this Agreement, and without &#xA;further action by the parties hereto, such provision shall be &#xA;reformed to the minimum extent necessary to make such provision &#xA;valid and enforceable. &#xA;If Recipient institutes patent litigation against a Contributor &#xA;with respect to a patent applicable to software (including a &#xA;cross-claim or counterclaim in a lawsuit), then any patent licenses &#xA;granted by that Contributor to such Recipient under this Agreement &#xA;shall terminate as of the date such litigation is filed. In addition, &#xA;if Recipient institutes patent litigation against any entity &#xA;(including a cross-claim or counterclaim in a lawsuit) alleging &#xA;that the Program itself (excluding combinations of the Program &#xA;with other software or hardware) infringes such Recipient&apos;s patent(s), &#xA;then such Recipient&apos;s rights granted under Section 2(b) shall &#xA;terminate as of the date such litigation is filed. &#xA;All Recipient&apos;s rights under this Agreement shall terminate if &#xA;it fails to comply with any of the material terms or conditions &#xA;of this Agreement and does not cure such failure in a reasonable &#xA;period of time after becoming aware of such noncompliance. If &#xA;all Recipient&apos;s rights under this Agreement terminate, Recipient &#xA;agrees to cease use and distribution of the Program as soon as &#xA;reasonably practicable. However, Recipient&apos;s obligations under &#xA;this Agreement and any licenses granted by Recipient relating &#xA;to the Program shall continue and survive. &#xA;Everyone is permitted to copy and distribute copies of this Agreement, &#xA;but in order to avoid inconsistency the Agreement is copyrighted &#xA;and may only be modified in the following manner. The Agreement &#xA;Steward reserves the right to publish new versions (including &#xA;revisions) of this Agreement from time to time. No one other &#xA;than the Agreement Steward has the right to modify this Agreement. &#xA;IBM is the initial Agreement Steward. IBM may assign the responsibility &#xA;to serve as the Agreement Steward to a suitable separate entity. &#xA;Each new version of the Agreement will be given a distinguishing &#xA;version number. The Program (including Contributions) may always &#xA;be distributed subject to the version of the Agreement under &#xA;which it was received. In addition, after a new version of the &#xA;Agreement is published, Contributor may elect to distribute the &#xA;Program (including its Contributions) under the new version. &#xA;Except as expressly stated in Sections 2(a) and 2(b) above, Recipient &#xA;receives no rights or licenses to the intellectual property of &#xA;any Contributor under this Agreement, whether expressly, by implication, &#xA;estoppel or otherwise. All rights in the Program not expressly &#xA;granted under this Agreement are reserved. &#xA;This Agreement is governed by the laws of the State of New York &#xA;and the intellectual property laws of the United States of America. &#xA;No party to this Agreement will bring a legal action under this &#xA;Agreement more than one year after the cause of action arose. &#xA;Each party waives its rights to a jury trial in any resulting &#xA;litigation. &#xA;'/>
-        <property name='df_LT.copyright' value='© Uwe Voigt, 2006, 2007. All Rights Reserved.'/>
-        <property name='df_LT.featureName' value='ZipEditor'/>
-        <property name='df_LT.description' value='An Eclipse editor to manipulate archives.&#xA;1.1.8&#xA;---------------------&#xA;- Replaced some references to deprecated types/methods&#xA;1.1.7&#xA;---------------------&#xA;- https://sourceforge.net/p/zipeditor/bugs/14/ remove references to org.eclipse.jface.util.Assert&#xA;1.1.6&#xA;---------------------&#xA;- https://sourceforge.net/p/zipeditor/bugs/11/ disable debug by default&#xA;- https://sourceforge.net/p/zipeditor/bugs/12/ don&apos;t log too much&#xA;- https://sourceforge.net/p/zipeditor/bugs/13/ late opening of files&#xA;1.1.5&#xA;---------------------&#xA;- added RPM read functionality&#xA;- added method (compressed/stored) to zip entries&#xA;- save archive type specific editor settings&#xA;- general performance improvements&#xA;New in release 1.1.4&#xA;---------------------&#xA;- Ctrl+O in the editor opens a quick outline&#xA;- &quot;Open in Zip Editor&quot; can be used on build path entries&#xA;- Editors opened on search results show marker annotations for occurrences now.&#xA;New in release 1.1.3&#xA;---------------------&#xA;- Use the Eclipse search to recursively search in archives.'/>
-        <property name='df_LT.providerName' value='Uwe Voigt'/>
+    <unit id='file:/data/git/plugins/site.xml.Andrey_Loskutov_plugins' version='1.0.0.7D7S7cdIbh--7kMkONJNViWMQ'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Eclipse plugins provided by Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.description' value='Eclipse plugins provided by Andrey Loskutov. More info at https://github.com/iloveeclipse/plugins/wiki'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
       </properties>
-      <provides size='2'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='zipeditor.feature.group' version='1.1.8.202010020827'/>
-        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/data/git/plugins/site.xml.Andrey_Loskutov_plugins' version='1.0.0.7D7S7cdIbh--7kMkONJNViWMQ'/>
       </provides>
-      <requires size='2'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='ZipEditor' range='[1.1.8.202010020827,1.1.8.202010020827]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='zipeditor.feature.jar' range='[1.1.8.202010020827,1.1.8.202010020827]'>
-          <filter>
-            (org.eclipse.update.install.features=true)
-          </filter>
-        </required>
+      <requires size='6'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='AnyEditTools.feature.group' range='[2.7.2.202006062100,2.7.2.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview.feature.feature.group' range='[1.0.1.202006062100,1.0.1.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='FileSync.feature.group' range='[1.3.10.202006062100,1.3.10.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.group' range='[1.3.0.202101071002,1.3.0.202101071002]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='JDepend4Eclipse.feature.group' range='[1.2.4.202006062100,1.2.4.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='DataHierarchy.feature.group' range='[1.0.3.202006062100,1.0.3.202006062100]'/>
       </requires>
       <touchpoint id='null' version='0.0.0'/>
-      <licenses size='1'>
-        <license uri='%25licenseURL' url='%25licenseURL'>
-          %license
-        </license>
-      </licenses>
-      <copyright>
-        %copyright
-      </copyright>
     </unit>
     <unit id='com.cr.lockness.Lockness' version='3.1.1' generation='2'>
       <update id='com.cr.lockness.Lockness' range='[0.0.0,3.1.1)' severity='0'/>
@@ -457,7 +680,11 @@
         <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
         <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
         <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
-        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            com.cr.lockness.Lockness
+          </description>
+        </requiredProperties>
       </requires>
       <artifacts size='1'>
         <artifact classifier='osgi.bundle' id='com.cr.lockness.Lockness' version='3.1.1'/>
@@ -474,44 +701,175 @@
         </instructions>
       </touchpointData>
     </unit>
-    <unit id='zipeditor.feature.jar' version='1.1.8.202010020827'>
-      <properties size='9'>
-        <property name='org.eclipse.equinox.p2.name' value='%featureName'/>
-        <property name='org.eclipse.equinox.p2.description' value='%description'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='%descriptionUrl'/>
-        <property name='org.eclipse.equinox.p2.provider' value='%providerName'/>
-        <property name='df_LT.license' value='THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS &#xA;COMMON PUBLIC LICENSE (&quot;AGREEMENT&quot;). ANY USE, REPRODUCTION OR &#xA;DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT&apos;S ACCEPTANCE &#xA;OF THIS AGREEMENT. &#xA;1. DEFINITIONS &#xA;&quot;Contribution&quot; means: &#xA;a) in the case of the initial Contributor, the initial code and &#xA;documentation distributed under this Agreement, and &#xA;b) in the case of each subsequent Contributor: &#xA;i) changes to the Program, and &#xA;ii) additions to the Program; &#xA;where such changes and/or additions to the Program originate &#xA;from and are distributed by that particular Contributor. A Contribution &#xA;&apos;originates&apos; from a Contributor if it was added to the Program &#xA;by such Contributor itself or anyone acting on such Contributor&apos;s &#xA;behalf. Contributions do not include additions to the Program &#xA;which:(i) are separate modules of software distributed in conjunction &#xA;with the Program under their own license agreement, and (ii) &#xA;are not derivative works of the Program. &#xA;&quot;Contributor&quot; means any person or entity that distributes the &#xA;Program. &#xA;&quot;Licensed Patents &quot; mean patent claims licensable by a Contributor &#xA;which are necessarily infringed by the use or sale of its Contribution &#xA;alone or when combined with the Program. &#xA;&quot;Program&quot; means the Contributions distributed in accordance with &#xA;this Agreement. &#xA;&quot;Recipient&quot; means anyone who receives the Program under this &#xA;Agreement, including all Contributors. &#xA;2. GRANT OF RIGHTS &#xA;a) Subject to the terms of this Agreement, each Contributor hereby &#xA;grants Recipient a non-exclusive, worldwide, royalty-free copyright &#xA;license to reproduce, prepare derivative works of, publicly display, &#xA;publicly perform, distribute and sublicense the Contribution &#xA;of such Contributor, if any, and such derivative works, in source &#xA;code and object code form. &#xA;b) Subject to the terms of this Agreement, each Contributor hereby &#xA;grants Recipient a non-exclusive, worldwide, royalty-free patent &#xA;license under Licensed Patents to make, use, sell, offer to sell, &#xA;import and otherwise transfer the Contribution of such Contributor, &#xA;if any, in source code and object code form. This patent license &#xA;shall apply to the combination of the Contribution and the Program &#xA;if, at the time the Contribution is added by the Contributor, &#xA;such addition of the Contribution causes such combination to &#xA;be covered by the Licensed Patents. The patent license shall &#xA;not apply to any other combinations which include the Contribution. &#xA;No hardware per se is licensed hereunder. &#xA;c) Recipient understands that although each Contributor grants &#xA;the licenses to its Contributions set forth herein, no assurances &#xA;are provided by any Contributor that the Program does not infringe &#xA;the patent or other intellectual property rights of any other &#xA;entity. Each Contributor disclaims any liability to Recipient &#xA;for claims brought by any other entity based on infringement &#xA;of intellectual property rights or otherwise. As a condition &#xA;to exercising the rights and licenses granted hereunder, each &#xA;Recipient hereby assumes sole responsibility to secure any other &#xA;intellectual property rights needed, if any. For example, if &#xA;a third party patent license is required to allow Recipient to &#xA;distribute the Program, it is Recipient&apos;s responsibility to acquire &#xA;that license before distributing the Program. &#xA;d) Each Contributor represents that to its knowledge it has sufficient &#xA;copyright rights in its Contribution, if any, to grant the copyright &#xA;license set forth in this Agreement. &#xA;3. REQUIREMENTS &#xA;A Contributor may choose to distribute the Program in object &#xA;code form under its own license agreement, provided that: &#xA;a) it complies with the terms and conditions of this Agreement; &#xA;and &#xA;b) its license agreement: &#xA;i) effectively disclaims on behalf of all Contributors all warranties &#xA;and conditions, express and implied, including warranties or &#xA;conditions of title and non-infringement, and implied warranties &#xA;or conditions of merchantability and fitness for a particular &#xA;purpose; &#xA;ii) effectively excludes on behalf of all Contributors all liability &#xA;for damages, including direct, indirect, special, incidental &#xA;and consequential damages, such as lost profits; &#xA;iii) states that any provisions which differ from this Agreement &#xA;are offered by that Contributor alone and not by any other party; &#xA;and &#xA;iv) states that source code for the Program is available from &#xA;such Contributor, and informs licensees how to obtain it in a &#xA;reasonable manner on or through a medium customarily used for &#xA;software exchange. &#xA;When the Program is made available in source code form: &#xA;a) it must be made available under this Agreement; and &#xA;b) a copy of this Agreement must be included with each copy of &#xA;the Program. &#xA;Contributors may not remove or alter any copyright notices contained &#xA;within the Program. &#xA;Each Contributor must identify itself as the originator of its &#xA;Contribution, if any, in a manner that reasonably allows subsequent &#xA;Recipients to identify the originator of the Contribution. &#xA;4. COMMERCIAL DISTRIBUTION &#xA;Commercial distributors of software may accept certain responsibilities &#xA;with respect to end users, business partners and the like. While &#xA;this license is intended to facilitate the commercial use of &#xA;the Program, the Contributor who includes the Program in a commercial &#xA;product offering should do so in a manner which does not create &#xA;potential liability for other Contributors. Therefore, if a Contributor &#xA;includes the Program in a commercial product offering, such Contributor &#xA;(&quot;Commercial Contributor&quot;) hereby agrees to defend and indemnify &#xA;every other Contributor (&quot;Indemnified Contributor&quot;) against any &#xA;losses, damages and costs (collectively &quot;Losses&quot;) arising from &#xA;claims, lawsuits and other legal actions brought by a third party &#xA;against the Indemnified Contributor to the extent caused by the &#xA;acts or omissions of such Commercial Contributor in connection &#xA;with its distribution of the Program in a commercial product &#xA;offering. The obligations in this section do not apply to any &#xA;claims or Losses relating to any actual or alleged intellectual &#xA;property infringement. In order to qualify, an Indemnified Contributor &#xA;must: a) promptly notify the Commercial Contributor in writing &#xA;of such claim, and b) allow the Commercial Contributor to control, &#xA;and cooperate with the Commercial Contributor in, the defense &#xA;and any related settlement negotiations. The Indemnified Contributor &#xA;may participate in any such claim at its own expense. &#xA;For example, a Contributor might include the Program in a commercial &#xA;product offering, Product X. That Contributor is then a Commercial &#xA;Contributor. If that Commercial Contributor then makes performance &#xA;claims, or offers warranties related to Product X, those performance &#xA;claims and warranties are such Commercial Contributor&apos;s responsibility &#xA;alone. Under this section, the Commercial Contributor would have &#xA;to defend claims against the other Contributors related to those &#xA;performance claims and warranties, and if a court requires any &#xA;other Contributor to pay any damages as a result, the Commercial &#xA;Contributor must pay those damages. &#xA;5. NO WARRANTY &#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM &#xA;IS PROVIDED ON AN &quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS &#xA;OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, &#xA;ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY &#xA;OR FITNESS FOR A PARTICULAR PURPOSE. Each Recipient is solely &#xA;responsible for determining the appropriateness of using and &#xA;distributing the Program and assumes all risks associated with &#xA;its exercise of rights under this Agreement, including but not &#xA;limited to the risks and costs of program errors, compliance &#xA;with applicable laws, damage to or loss of data, programs or &#xA;equipment, and unavailability or interruption of operations. &#xA;6. DISCLAIMER OF LIABILITY &#xA;EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT &#xA;NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT, &#xA;INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES &#xA;(INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED AND &#xA;ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, &#xA;OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY &#xA;OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE EXERCISE &#xA;OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY &#xA;OF SUCH DAMAGES. &#xA;7. GENERAL &#xA;If any provision of this Agreement is invalid or unenforceable &#xA;under applicable law, it shall not affect the validity or enforceability &#xA;of the remainder of the terms of this Agreement, and without &#xA;further action by the parties hereto, such provision shall be &#xA;reformed to the minimum extent necessary to make such provision &#xA;valid and enforceable. &#xA;If Recipient institutes patent litigation against a Contributor &#xA;with respect to a patent applicable to software (including a &#xA;cross-claim or counterclaim in a lawsuit), then any patent licenses &#xA;granted by that Contributor to such Recipient under this Agreement &#xA;shall terminate as of the date such litigation is filed. In addition, &#xA;if Recipient institutes patent litigation against any entity &#xA;(including a cross-claim or counterclaim in a lawsuit) alleging &#xA;that the Program itself (excluding combinations of the Program &#xA;with other software or hardware) infringes such Recipient&apos;s patent(s), &#xA;then such Recipient&apos;s rights granted under Section 2(b) shall &#xA;terminate as of the date such litigation is filed. &#xA;All Recipient&apos;s rights under this Agreement shall terminate if &#xA;it fails to comply with any of the material terms or conditions &#xA;of this Agreement and does not cure such failure in a reasonable &#xA;period of time after becoming aware of such noncompliance. If &#xA;all Recipient&apos;s rights under this Agreement terminate, Recipient &#xA;agrees to cease use and distribution of the Program as soon as &#xA;reasonably practicable. However, Recipient&apos;s obligations under &#xA;this Agreement and any licenses granted by Recipient relating &#xA;to the Program shall continue and survive. &#xA;Everyone is permitted to copy and distribute copies of this Agreement, &#xA;but in order to avoid inconsistency the Agreement is copyrighted &#xA;and may only be modified in the following manner. The Agreement &#xA;Steward reserves the right to publish new versions (including &#xA;revisions) of this Agreement from time to time. No one other &#xA;than the Agreement Steward has the right to modify this Agreement. &#xA;IBM is the initial Agreement Steward. IBM may assign the responsibility &#xA;to serve as the Agreement Steward to a suitable separate entity. &#xA;Each new version of the Agreement will be given a distinguishing &#xA;version number. The Program (including Contributions) may always &#xA;be distributed subject to the version of the Agreement under &#xA;which it was received. In addition, after a new version of the &#xA;Agreement is published, Contributor may elect to distribute the &#xA;Program (including its Contributions) under the new version. &#xA;Except as expressly stated in Sections 2(a) and 2(b) above, Recipient &#xA;receives no rights or licenses to the intellectual property of &#xA;any Contributor under this Agreement, whether expressly, by implication, &#xA;estoppel or otherwise. All rights in the Program not expressly &#xA;granted under this Agreement are reserved. &#xA;This Agreement is governed by the laws of the State of New York &#xA;and the intellectual property laws of the United States of America. &#xA;No party to this Agreement will bring a legal action under this &#xA;Agreement more than one year after the cause of action arose. &#xA;Each party waives its rights to a jury trial in any resulting &#xA;litigation. &#xA;'/>
-        <property name='df_LT.copyright' value='© Uwe Voigt, 2006, 2007. All Rights Reserved.'/>
-        <property name='df_LT.featureName' value='ZipEditor'/>
-        <property name='df_LT.description' value='An Eclipse editor to manipulate archives.&#xA;1.1.8&#xA;---------------------&#xA;- Replaced some references to deprecated types/methods&#xA;1.1.7&#xA;---------------------&#xA;- https://sourceforge.net/p/zipeditor/bugs/14/ remove references to org.eclipse.jface.util.Assert&#xA;1.1.6&#xA;---------------------&#xA;- https://sourceforge.net/p/zipeditor/bugs/11/ disable debug by default&#xA;- https://sourceforge.net/p/zipeditor/bugs/12/ don&apos;t log too much&#xA;- https://sourceforge.net/p/zipeditor/bugs/13/ late opening of files&#xA;1.1.5&#xA;---------------------&#xA;- added RPM read functionality&#xA;- added method (compressed/stored) to zip entries&#xA;- save archive type specific editor settings&#xA;- general performance improvements&#xA;New in release 1.1.4&#xA;---------------------&#xA;- Ctrl+O in the editor opens a quick outline&#xA;- &quot;Open in Zip Editor&quot; can be used on build path entries&#xA;- Editors opened on search results show marker annotations for occurrences now.&#xA;New in release 1.1.3&#xA;---------------------&#xA;- Use the Eclipse search to recursively search in archives.'/>
-        <property name='df_LT.providerName' value='Uwe Voigt'/>
+    <unit id='org.eclipse.jdt.bcoview' version='1.0.1.202006062100' generation='2'>
+      <update id='org.eclipse.jdt.bcoview' range='[0.0.0,1.0.1.202006062100)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Bytecode Outline'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
       </properties>
-      <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='zipeditor.feature.jar' version='1.1.8.202010020827'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='zipeditor' version='1.1.8.202010020827'/>
+      <provides size='5'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'/>
+        <provided namespace='osgi.bundle' name='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'/>
+        <provided namespace='java.package' name='org.eclipse.jdt.bcoview.ui' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
       </provides>
-      <filter>
-        (org.eclipse.update.install.features=true)
-      </filter>
+      <requires size='21'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='3.15.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.help.base' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.debug' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm' range='7.0.0'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm.tree' range='7.0.0'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm.analysis' range='7.0.0'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm.commons' range='7.0.0'/>
+        <required namespace='osgi.bundle' name='org.objectweb.asm.util' range='7.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='1.7.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            org.eclipse.jdt.bcoview
+          </description>
+        </requiredProperties>
+      </requires>
       <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='zipeditor' version='1.1.8.202010020827'/>
+        <artifact classifier='osgi.bundle' id='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'/>
       </artifacts>
       <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
       <touchpointData size='1'>
         <instructions size='1'>
-          <instruction key='zipped'>
-            true
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.eclipse.jdt.bcoview;singleton:=true&#xA;Bundle-Version: 1.0.1.202006062100&#xA;
           </instruction>
         </instructions>
       </touchpointData>
+    </unit>
+    <unit id='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100' generation='2'>
+      <update id='de.loskutov.anyedit.AnyEditTools' range='[0.0.0,2.7.2.202006062100)' severity='0'/>
+      <properties size='5'>
+        <property name='df_LT.Bundle-Name' value='AnyEdit Tools'/>
+        <property name='df_LT.Bundle-Vendor' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name'/>
+        <property name='org.eclipse.equinox.p2.provider' value='%Bundle-Vendor'/>
+        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
+      </properties>
+      <provides size='19'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'/>
+        <provided namespace='osgi.bundle' name='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.actions' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.actions.compare' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.actions.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.actions.replace' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.actions.sort' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.compare' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.console' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.jdt' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.ui.editor' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.ui.preferences' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.ui.util' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.ui.wizards' version='0.0.0'/>
+        <provided namespace='java.package' name='de.loskutov.anyedit.util' version='0.0.0'/>
+        <provided namespace='osgi.identity' name='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'>
+          <properties size='1'>
+            <property name='type' value='osgi.bundle'/>
+          </properties>
+        </provided>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
+      </provides>
+      <requires size='20'>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.8.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.forms' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.expressions' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.net' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.junit' range='0.0.0' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.jdt.annotation' range='[1.1.0,1.2.0)' optional='true' greedy='false'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench' range='3.8.0'/>
+        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'>
+          <description>
+            de.loskutov.anyedit.AnyEditTools
+          </description>
+        </requiredProperties>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: de.loskutov.anyedit.AnyEditTools;singleton:=true&#xA;Bundle-Version: 2.7.2.202006062100&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.eclipse.jdt.bcoview.feature.feature.group' version='1.0.1.202006062100' singleton='false'>
+      <update id='org.eclipse.jdt.bcoview.feature.feature.group' range='[0.0.0,1.0.1.202006062100)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Bytecode Outline'/>
+        <property name='org.eclipse.equinox.p2.description' value='Bytecode outline and bytecode comparison view for java/class files.'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/bytecodeoutline/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview.feature.feature.group' version='1.0.1.202006062100'/>
+      </provides>
+      <requires size='15'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface.text' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.console' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.help.base' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.debug.ui' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.debug' range='0.0.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.core' range='3.6.0'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview' range='[1.0.1.202006062100,1.0.1.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview.feature.feature.jar' range='[1.0.1.202006062100,1.0.1.202006062100]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
       <licenses size='1'>
-        <license uri='%25licenseURL' url='%25licenseURL'>
-          %license
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
         </license>
       </licenses>
-      <copyright>
-        %copyright
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
       </copyright>
     </unit>
     <unit id='FileSync.feature.jar' version='1.3.10.202006062100'>
@@ -624,411 +982,6 @@
       </licenses>
       <copyright>
         CR, lockness.plugin@free.fr
-      </copyright>
-    </unit>
-    <unit id='AnyEditTools.feature.jar' version='2.7.2.202006062100'>
-      <properties size='5'>
-        <property name='org.eclipse.equinox.p2.name' value='AnyEditTools'/>
-        <property name='org.eclipse.equinox.p2.description' value='Adds useful context menu actions to text files and editors - Open file, type under&#xA;      cursor, Convert tabs to spaces, case, html, base64, unicode, Compare/Replace with&#xA;      clipboard or external files etc. AnyEdit can remove trailing whitespace and/or&#xA;      convert tabs-spaces on save and contributes Import/Export working sets wizards.'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='http://andrei.gmxhome.de/anyedit/index.html'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
-        <property name='org.eclipse.update.feature.plugin' value='de.loskutov.anyedit.AnyEditTools'/>
-      </properties>
-      <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='AnyEditTools.feature.jar' version='2.7.2.202006062100'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='AnyEditTools' version='2.7.2.202006062100'/>
-      </provides>
-      <filter>
-        (org.eclipse.update.install.features=true)
-      </filter>
-      <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='AnyEditTools' version='2.7.2.202006062100'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='zipped'>
-            true
-          </instruction>
-        </instructions>
-      </touchpointData>
-      <licenses size='1'>
-        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
-          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
-        </license>
-      </licenses>
-      <copyright uri='..' url='..'>
-        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
-      </copyright>
-    </unit>
-    <unit id='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100' generation='2'>
-      <update id='de.loskutov.eclipse.jdepend' range='[0.0.0,1.2.4.202006062100)' severity='0'/>
-      <properties size='2'>
-        <property name='org.eclipse.equinox.p2.name' value='JDepend4Eclipse'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
-      </properties>
-      <provides size='7'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'/>
-        <provided namespace='osgi.bundle' name='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'/>
-        <provided namespace='java.package' name='jdepend.framework' version='0.0.0'/>
-        <provided namespace='java.package' name='jdepend.textui' version='0.0.0'/>
-        <provided namespace='java.package' name='jdepend.xmlui' version='0.0.0'/>
-        <provided namespace='osgi.identity' name='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'>
-          <properties size='1'>
-            <property name='type' value='osgi.bundle'/>
-          </properties>
-        </provided>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
-      </provides>
-      <requires size='12'>
-        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.6.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.swt' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jface' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.help' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
-        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'/>
-      </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: de.loskutov.eclipse.jdepend; singleton:=true&#xA;Bundle-Version: 1.2.4.202006062100&#xA;
-          </instruction>
-        </instructions>
-      </touchpointData>
-    </unit>
-    <unit id='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817' generation='2'>
-      <update id='org.eclipselabs.plugindependencies.ui' range='[0.0.0,1.3.0.202007221817)' severity='0'/>
-      <properties size='4'>
-        <property name='df_LT.Bundle-Name' value='Plug-in Dependencies Explorer'/>
-        <property name='df_LT.Vendor' value='Andrey Loskutov'/>
-        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name'/>
-        <property name='org.eclipse.equinox.p2.provider' value='%Vendor'/>
-      </properties>
-      <provides size='9'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817'/>
-        <provided namespace='osgi.bundle' name='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817'/>
-        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui' version='0.0.0'/>
-        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui.adapter' version='0.0.0'/>
-        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui.console' version='0.0.0'/>
-        <provided namespace='java.package' name='org.eclipselabs.plugindependencies.ui.view' version='0.0.0'/>
-        <provided namespace='osgi.identity' name='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817'>
-          <properties size='1'>
-            <property name='type' value='osgi.bundle'/>
-          </properties>
-        </provided>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
-        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
-      </provides>
-      <requires size='10'>
-        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.8.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.pde.core' range='3.8.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.equinox.frameworkadmin' range='2.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipselabs.plugindependencies.core' range='1.0.5'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
-        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'/>
-      </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: org.eclipselabs.plugindependencies.ui;singleton:=true&#xA;Bundle-Version: 1.3.0.202007221817&#xA;
-          </instruction>
-        </instructions>
-      </touchpointData>
-    </unit>
-    <unit id='file:/data/git/plugins/published_update_site/site.xml.Default' version='1.0.0.7837Gd-fh--7737353373I7G'>
-      <properties size='3'>
-        <property name='org.eclipse.equinox.p2.name' value='Uncategorized'/>
-        <property name='org.eclipse.equinox.p2.description' value='Default category for otherwise uncategorized features'/>
-        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/data/git/plugins/published_update_site/site.xml.Default' version='1.0.0.7837Gd-fh--7737353373I7G'/>
-      </provides>
-      <requires size='2'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='com.cr.lockness.Lockness.feature.feature.group' range='[3.1.1,3.1.1]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='zipeditor.feature.group' range='[1.1.8.202010020827,1.1.8.202010020827]'/>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-    </unit>
-    <unit id='org.eclipselabs.plugindependencies.feature.jar' version='1.3.0.202101071002'>
-      <properties size='5'>
-        <property name='org.eclipse.equinox.p2.name' value='Plugin Dependencies Explorer'/>
-        <property name='org.eclipse.equinox.p2.description' value='Project provides both command line and Eclipse UI for static package, plugin and feature dependencies analysis (the dependencies are read from MANIFEST.MF and feature.xml files).'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/plugindependencies/wiki'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
-        <property name='org.eclipse.update.feature.plugin' value='org.eclipselabs.plugindependencies.ui'/>
-      </properties>
-      <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.jar' version='1.3.0.202101071002'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='org.eclipselabs.plugindependencies' version='1.3.0.202101071002'/>
-      </provides>
-      <filter>
-        (org.eclipse.update.install.features=true)
-      </filter>
-      <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='org.eclipselabs.plugindependencies' version='1.3.0.202101071002'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='zipped'>
-            true
-          </instruction>
-        </instructions>
-      </touchpointData>
-      <licenses size='1'>
-        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
-          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
-        </license>
-      </licenses>
-      <copyright uri='..' url='..'>
-        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
-      </copyright>
-    </unit>
-    <unit id='de.loskutov.FileSync' version='1.3.10.202006062100' generation='2'>
-      <update id='de.loskutov.FileSync' range='[0.0.0,1.3.10.202006062100)' severity='0'/>
-      <properties size='2'>
-        <property name='org.eclipse.equinox.p2.name' value='FileSync Plug-in'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
-      </properties>
-      <provides size='11'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.FileSync' version='1.3.10.202006062100'/>
-        <provided namespace='osgi.bundle' name='de.loskutov.FileSync' version='1.3.10.202006062100'/>
-        <provided namespace='java.package' name='de.loskutov.fs' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.fs.actions' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.fs.builder' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.fs.command' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.fs.dialogs' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.fs.preferences' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.fs.properties' version='0.0.0'/>
-        <provided namespace='osgi.identity' name='de.loskutov.FileSync' version='1.3.10.202006062100'>
-          <properties size='1'>
-            <property name='type' value='osgi.bundle'/>
-          </properties>
-        </provided>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
-      </provides>
-      <requires size='7'>
-        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.6.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.resources' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.net' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.variables' range='0.0.0'/>
-        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'/>
-      </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='de.loskutov.FileSync' version='1.3.10.202006062100'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: de.loskutov.FileSync;singleton:=true&#xA;Bundle-Version: 1.3.10.202006062100&#xA;
-          </instruction>
-        </instructions>
-      </touchpointData>
-    </unit>
-    <unit id='file:/data/git/plugins/published_update_site/site.xml.Andrey_Loskutov_plugins' version='1.0.0.7D7S7cdIbh--7kMkONJNViWMQ'>
-      <properties size='3'>
-        <property name='org.eclipse.equinox.p2.name' value='Eclipse plugins provided by Andrey Loskutov'/>
-        <property name='org.eclipse.equinox.p2.description' value='Eclipse plugins provided by Andrey Loskutov. More info at https://github.com/iloveeclipse/plugins/wiki'/>
-        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/data/git/plugins/published_update_site/site.xml.Andrey_Loskutov_plugins' version='1.0.0.7D7S7cdIbh--7kMkONJNViWMQ'/>
-      </provides>
-      <requires size='6'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='AnyEditTools.feature.group' range='[2.7.2.202006062100,2.7.2.202006062100]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview.feature.feature.group' range='[1.0.1.202006062100,1.0.1.202006062100]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='FileSync.feature.group' range='[1.3.10.202006062100,1.3.10.202006062100]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.group' range='[1.3.0.202101071002,1.3.0.202101071002]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='JDepend4Eclipse.feature.group' range='[1.2.4.202006062100,1.2.4.202006062100]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='DataHierarchy.feature.group' range='[1.0.3.202006062100,1.0.3.202006062100]'/>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-    </unit>
-    <unit id='org.eclipse.jdt.bcoview' version='1.0.1.202006062100' generation='2'>
-      <update id='org.eclipse.jdt.bcoview' range='[0.0.0,1.0.1.202006062100)' severity='0'/>
-      <properties size='2'>
-        <property name='org.eclipse.equinox.p2.name' value='Bytecode Outline'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
-      </properties>
-      <provides size='5'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'/>
-        <provided namespace='osgi.bundle' name='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'/>
-        <provided namespace='java.package' name='org.eclipse.jdt.bcoview.ui' version='0.0.0'/>
-        <provided namespace='osgi.identity' name='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'>
-          <properties size='1'>
-            <property name='type' value='osgi.bundle'/>
-          </properties>
-        </provided>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
-      </provides>
-      <requires size='21'>
-        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='3.15.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.help.base' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jdt.debug' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.junit' range='0.0.0' optional='true' greedy='false'/>
-        <required namespace='osgi.bundle' name='org.objectweb.asm' range='7.0.0'/>
-        <required namespace='osgi.bundle' name='org.objectweb.asm.tree' range='7.0.0'/>
-        <required namespace='osgi.bundle' name='org.objectweb.asm.analysis' range='7.0.0'/>
-        <required namespace='osgi.bundle' name='org.objectweb.asm.commons' range='7.0.0'/>
-        <required namespace='osgi.bundle' name='org.objectweb.asm.util' range='7.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='1.7.0'/>
-        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'/>
-      </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.eclipse.jdt.bcoview' version='1.0.1.202006062100'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: org.eclipse.jdt.bcoview;singleton:=true&#xA;Bundle-Version: 1.0.1.202006062100&#xA;
-          </instruction>
-        </instructions>
-      </touchpointData>
-    </unit>
-    <unit id='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100' generation='2'>
-      <update id='de.loskutov.anyedit.AnyEditTools' range='[0.0.0,2.7.2.202006062100)' severity='0'/>
-      <properties size='5'>
-        <property name='df_LT.Bundle-Name' value='AnyEdit Tools'/>
-        <property name='df_LT.Bundle-Vendor' value='Andrey Loskutov'/>
-        <property name='org.eclipse.equinox.p2.name' value='%Bundle-Name'/>
-        <property name='org.eclipse.equinox.p2.provider' value='%Bundle-Vendor'/>
-        <property name='org.eclipse.equinox.p2.bundle.localization' value='plugin'/>
-      </properties>
-      <provides size='19'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'/>
-        <provided namespace='osgi.bundle' name='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.actions' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.actions.compare' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.actions.internal' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.actions.replace' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.actions.sort' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.compare' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.console' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.jdt' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.ui.editor' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.ui.preferences' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.ui.util' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.ui.wizards' version='0.0.0'/>
-        <provided namespace='java.package' name='de.loskutov.anyedit.util' version='0.0.0'/>
-        <provided namespace='osgi.identity' name='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'>
-          <properties size='1'>
-            <property name='type' value='osgi.bundle'/>
-          </properties>
-        </provided>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
-        <provided namespace='org.eclipse.equinox.p2.localization' name='df_LT' version='1.0.0'/>
-      </provides>
-      <requires size='20'>
-        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='3.8.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.filesystem' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.forms' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jface.text' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.expressions' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.core.net' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jdt.launching' range='0.0.0' optional='true' greedy='false'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jdt.ui' range='0.0.0' optional='true' greedy='false'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jdt.core' range='0.0.0' optional='true' greedy='false'/>
-        <required namespace='osgi.bundle' name='org.junit' range='0.0.0' optional='true' greedy='false'/>
-        <required namespace='osgi.bundle' name='org.eclipse.jdt.annotation' range='[1.1.0,1.2.0)' optional='true' greedy='false'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.workbench' range='3.8.0'/>
-        <requiredProperties namespace='osgi.ee' match='(&amp;(osgi.ee=JavaSE)(version=1.8))'/>
-      </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='de.loskutov.anyedit.AnyEditTools' version='2.7.2.202006062100'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: de.loskutov.anyedit.AnyEditTools;singleton:=true&#xA;Bundle-Version: 2.7.2.202006062100&#xA;
-          </instruction>
-        </instructions>
-      </touchpointData>
-    </unit>
-    <unit id='org.eclipse.jdt.bcoview.feature.feature.group' version='1.0.1.202006062100' singleton='false'>
-      <update id='org.eclipse.jdt.bcoview.feature.feature.group' range='[0.0.0,1.0.1.202006062100)' severity='0'/>
-      <properties size='5'>
-        <property name='org.eclipse.equinox.p2.name' value='Bytecode Outline'/>
-        <property name='org.eclipse.equinox.p2.description' value='Bytecode outline and bytecode comparison view for java/class files.'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/bytecodeoutline/wiki'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
-        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview.feature.feature.group' version='1.0.1.202006062100'/>
-      </provides>
-      <requires size='15'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.editors' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.core.runtime' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jface.text' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.workbench.texteditor' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.ui' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.compare' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.console' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.help.base' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.debug.ui' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.debug' range='0.0.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.core' range='3.6.0'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview' range='[1.0.1.202006062100,1.0.1.202006062100]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.jdt.bcoview.feature.feature.jar' range='[1.0.1.202006062100,1.0.1.202006062100]'>
-          <filter>
-            (org.eclipse.update.install.features=true)
-          </filter>
-        </required>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-      <licenses size='1'>
-        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
-          Copyright (c) 2004 - 2020 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
-        </license>
-      </licenses>
-      <copyright uri='..' url='..'>
-        Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
       </copyright>
     </unit>
   </units>
