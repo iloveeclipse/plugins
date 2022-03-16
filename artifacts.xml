@@ -2,7 +2,7 @@
 <?artifactRepository version='1.1.0'?>
 <repository name='Andrey_Loskutov_plugins' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1610031526978'/>
+    <property name='p2.timestamp' value='1647423821220'/>
     <property name='p2.compressed' value='false'/>
   </properties>
   <mappings size='3'>
@@ -87,15 +87,6 @@
         <property name='download.checksum.sha-256' value='a8c3a3e8d5f53fa83b198844ef515a4e43a30aeb15f644d879a4fbd97ae49f91'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.ui' version='1.3.0.202007221817'>
-      <properties size='5'>
-        <property name='artifact.size' value='90062'/>
-        <property name='download.size' value='90062'/>
-        <property name='download.md5' value='7844b9d6baccce7c0de709c24f5a0fbf'/>
-        <property name='download.checksum.md5' value='7844b9d6baccce7c0de709c24f5a0fbf'/>
-        <property name='download.checksum.sha-256' value='563ceec3edf2f97cbbfc41c5de3512d89ac3746c7d306c804b4e2d90ebb703eb'/>
-      </properties>
-    </artifact>
     <artifact classifier='osgi.bundle' id='com.cr.lockness.Lockness' version='3.1.1'>
       <properties size='5'>
         <property name='artifact.size' value='84999'/>
@@ -105,6 +96,16 @@
         <property name='download.checksum.sha-256' value='e8a3b460300af891ae96209549c43712ec11998617c9644e8899bfa2a75f5345'/>
       </properties>
     </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.eclipselabs.plugindependencies' version='1.3.1.202203161032'>
+      <properties size='6'>
+        <property name='artifact.size' value='745'/>
+        <property name='download.size' value='745'/>
+        <property name='download.md5' value='bfd054081395da0bffd218c6971fb2cd'/>
+        <property name='download.checksum.md5' value='bfd054081395da0bffd218c6971fb2cd'/>
+        <property name='download.checksum.sha-256' value='6ba1e61fc538a2b413a7fa93edcdc7f697e6ca6a506d1f59bc56f2d7bf5e5d85'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
     <artifact classifier='osgi.bundle' id='de.loskutov.DataHierarchy' version='1.0.3.202006062100'>
       <properties size='5'>
         <property name='artifact.size' value='132551'/>
@@ -112,6 +113,15 @@
         <property name='download.md5' value='fdd5d69f2a0cb7e610239c98cdcb831e'/>
         <property name='download.checksum.md5' value='fdd5d69f2a0cb7e610239c98cdcb831e'/>
         <property name='download.checksum.sha-256' value='cbeb0d9ce71c324cc973e82a4953984a4c40b4c254ad4d2015cbe88589c5ffd3'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.ui' version='1.3.0.202203161032'>
+      <properties size='5'>
+        <property name='artifact.size' value='90062'/>
+        <property name='download.size' value='90062'/>
+        <property name='download.md5' value='7f912bd2f078aacce4775444fc5572a8'/>
+        <property name='download.checksum.md5' value='7f912bd2f078aacce4775444fc5572a8'/>
+        <property name='download.checksum.sha-256' value='f5f478205b46c54a2b1678c3f0b3b8c16947226fab2def580e4237d456f7f111'/>
       </properties>
     </artifact>
     <artifact classifier='org.eclipse.update.feature' id='FileSync' version='1.3.10.202006062100'>
@@ -134,23 +144,13 @@
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>
-    <artifact classifier='org.eclipse.update.feature' id='org.eclipselabs.plugindependencies' version='1.3.0.202101071002'>
-      <properties size='6'>
-        <property name='artifact.size' value='976'/>
-        <property name='download.size' value='976'/>
-        <property name='download.md5' value='dbd04decc839637123a2bc0300a7aa7a'/>
-        <property name='download.checksum.md5' value='dbd04decc839637123a2bc0300a7aa7a'/>
-        <property name='download.checksum.sha-256' value='7526a9d8e863bf782b09b3c4836fb522165dec4d437c05917d7723c4970c685a'/>
-        <property name='download.contentType' value='application/zip'/>
-      </properties>
-    </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.core' version='1.3.0'>
+    <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.core' version='1.3.1'>
       <properties size='5'>
-        <property name='artifact.size' value='104306'/>
-        <property name='download.size' value='104306'/>
-        <property name='download.md5' value='79ab3460d283446576988b5c525330da'/>
-        <property name='download.checksum.md5' value='79ab3460d283446576988b5c525330da'/>
-        <property name='download.checksum.sha-256' value='80f7b23fe3eb7371f8e4533520b26eae8580e2bade6c6b749f657deff58bb688'/>
+        <property name='artifact.size' value='104373'/>
+        <property name='download.size' value='104373'/>
+        <property name='download.md5' value='94b7fa43a0f8fd0597d06bbcbec5af4f'/>
+        <property name='download.checksum.md5' value='94b7fa43a0f8fd0597d06bbcbec5af4f'/>
+        <property name='download.checksum.sha-256' value='636f6b281ba2771353847ba974b81a699c8952fb61273e2e0352eb2278692646'/>
       </properties>
     </artifact>
   </artifacts>
