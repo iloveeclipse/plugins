@@ -18,7 +18,7 @@
    <feature url="features/DataHierarchy_1.0.3.202006062100.jar" id="DataHierarchy" version="1.0.3.202006062100">
       <category name="Andrey_Loskutov_plugins"/>
    </feature>
-   <feature url="features/org.eclipse.jdt.bcoview.feature_1.0.1.202006062100.jar" id="org.eclipse.jdt.bcoview.feature" version="1.0.1.202006062100">
+   <feature url="features/org.eclipse.jdt.bcoview.feature_1.0.2.202301142022.jar" id="org.eclipse.jdt.bcoview.feature" version="1.0.2.202301142022">
       <category name="Andrey_Loskutov_plugins"/>
    </feature>
    <feature url="features/com.cr.lockness.Lockness.feature_3.1.1.jar" id="com.cr.lockness.Lockness.feature" version="3.1.1"/>
