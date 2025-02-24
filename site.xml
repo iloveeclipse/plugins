@@ -9,7 +9,7 @@
    <feature url="features/FileSync_1.3.10.202006062100.jar" id="FileSync" version="1.3.10.202006062100">
       <category name="Andrey_Loskutov_plugins"/>
    </feature>
-   <feature url="features/AnyEditTools_2.7.2.202006062100.jar" id="AnyEditTools" version="2.7.2.202006062100">
+   <feature url="features/AnyEditTools_2.7.3.202502241151.jar" id="AnyEditTools" version="2.7.3.202502241151">
       <category name="Andrey_Loskutov_plugins"/>
    </feature>
    <feature url="features/org.eclipselabs.plugindependencies_1.3.3.202301042029.jar" id="org.eclipselabs.plugindependencies" version="1.3.3.202301042029">
@@ -18,10 +18,7 @@
    <feature url="features/DataHierarchy_1.0.3.202006062100.jar" id="DataHierarchy" version="1.0.3.202006062100">
       <category name="Andrey_Loskutov_plugins"/>
    </feature>
-   <feature url="features/org.eclipse.jdt.bcoview.feature_1.0.2.202301142351.jar" id="org.eclipse.jdt.bcoview.feature" version="1.0.2.202301142351">
-      <category name="Andrey_Loskutov_plugins"/>
-   </feature>
-   <feature url="features/com.cr.lockness.Lockness.feature_3.1.1.jar" id="com.cr.lockness.Lockness.feature" version="3.1.1"/>
+   <feature url="features/com.cr.lockness.Lockness.feature_3.1.2.jar" id="com.cr.lockness.Lockness.feature" version="3.1.2"/>
    <category-def name="Andrey_Loskutov_plugins" label="Eclipse plugins provided by Andrey Loskutov">
       <description>
          Eclipse plugins provided by Andrey Loskutov. More info at https://github.com/iloveeclipse/plugins/wiki

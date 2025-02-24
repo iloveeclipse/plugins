@@ -66,7 +66,7 @@ echo -e "Copy binaries..."
 cp -r ${src}/binary ${trg}/
 
 
-eclipse="/opt/hp93000rt/el7/x86_64/ewc_415/eclipse-SDK-4.15-linux-gtk-x86_64/eclipse/eclipse"
+eclipse="/data2/SDK/eclipse4.35/eclipse/eclipse"
 
 if [[ ! -x "${eclipse}" ]] ; then
   echo -e "Missing file: ${eclipse}"
