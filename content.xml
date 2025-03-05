@@ -2,7 +2,7 @@
 <?metadataRepository version='1.2.0'?>
 <repository name='zip_editor' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1740398781688'/>
+    <property name='p2.timestamp' value='1741162002985'/>
     <property name='p2.compressed' value='false'/>
   </properties>
   <references size='2'>
@@ -104,8 +104,8 @@
         CR, lockness.plugin@free.fr
       </copyright>
     </unit>
-    <unit id='org.eclipselabs.plugindependencies.core' version='1.3.4' generation='2'>
-      <update id='org.eclipselabs.plugindependencies.core' range='[0.0.0,1.3.4)' severity='0'/>
+    <unit id='org.eclipselabs.plugindependencies.core' version='1.3.5' generation='2'>
+      <update id='org.eclipselabs.plugindependencies.core' range='[0.0.0,1.3.5)' severity='0'/>
       <properties size='4'>
         <property name='df_LT.Bundle-Name' value='Plug-in Dependencies Core'/>
         <property name='df_LT.Vendor' value='Andrey Loskutov'/>
@@ -113,10 +113,10 @@
         <property name='org.eclipse.equinox.p2.provider' value='%Vendor'/>
       </properties>
       <provides size='6'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.core' version='1.3.4'/>
-        <provided namespace='osgi.bundle' name='org.eclipselabs.plugindependencies.core' version='1.3.4'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.core' version='1.3.5'/>
+        <provided namespace='osgi.bundle' name='org.eclipselabs.plugindependencies.core' version='1.3.5'/>
         <provided namespace='java.package' name='org.eclipselabs.plugindependencies.core' version='0.0.0'/>
-        <provided namespace='osgi.identity' name='org.eclipselabs.plugindependencies.core' version='1.3.4'>
+        <provided namespace='osgi.identity' name='org.eclipselabs.plugindependencies.core' version='1.3.5'>
           <properties size='1'>
             <property name='type' value='osgi.bundle'/>
           </properties>
@@ -130,64 +130,23 @@
             org.eclipselabs.plugindependencies.core
           </description>
         </requiredProperties>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.core.source' range='[1.3.4,1.3.4]' optional='true'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.core.source' range='[1.3.5,1.3.5]' optional='true'>
           <filter>
             (org.eclipse.update.install.sources=true)
           </filter>
         </required>
       </requires>
       <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.core' version='1.3.4'/>
+        <artifact classifier='osgi.bundle' id='org.eclipselabs.plugindependencies.core' version='1.3.5'/>
       </artifacts>
       <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
       <touchpointData size='1'>
         <instructions size='1'>
           <instruction key='manifest'>
-            Bundle-SymbolicName: org.eclipselabs.plugindependencies.core;singleton:=true&#xA;Bundle-Version: 1.3.4&#xA;
+            Bundle-SymbolicName: org.eclipselabs.plugindependencies.core;singleton:=true&#xA;Bundle-Version: 1.3.5&#xA;
           </instruction>
         </instructions>
       </touchpointData>
-    </unit>
-    <unit id='org.eclipselabs.plugindependencies.feature.group' version='1.3.3.202301042029' singleton='false'>
-      <update id='org.eclipselabs.plugindependencies.feature.group' range='[0.0.0,1.3.3.202301042029)' severity='0'/>
-      <properties size='5'>
-        <property name='org.eclipse.equinox.p2.name' value='Plugin Dependencies Explorer'/>
-        <property name='org.eclipse.equinox.p2.description' value='Project provides both command line and Eclipse UI for static package, plugin and feature dependencies analysis (the dependencies are read from MANIFEST.MF and feature.xml files).'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/plugindependencies/wiki'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
-        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.group' version='1.3.3.202301042029'/>
-      </provides>
-      <requires size='5'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='3.9.0'>
-          <filter>
-            (!(org.eclipse.equinox.p2.exclude.import=true))
-          </filter>
-        </required>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.pde.feature.group' range='3.9.0'>
-          <filter>
-            (!(org.eclipse.equinox.p2.exclude.import=true))
-          </filter>
-        </required>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.core' range='[1.3.4,1.3.4]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.ui' range='[1.3.2.202301042029,1.3.2.202301042029]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.jar' range='[1.3.3.202301042029,1.3.3.202301042029]'>
-          <filter>
-            (org.eclipse.update.install.features=true)
-          </filter>
-        </required>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-      <licenses size='1'>
-        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
-          Copyright (c) 2004 - 2022 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
-        </license>
-      </licenses>
-      <copyright uri='..' url='..'>
-        Copyright (c) 2004-2022 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
-      </copyright>
     </unit>
     <unit id='DataHierarchy.feature.jar' version='1.0.3.202006062100'>
       <properties size='5'>
@@ -223,6 +182,42 @@
       </licenses>
       <copyright uri='..' url='..'>
         Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
+    <unit id='org.eclipselabs.plugindependencies.feature.jar' version='1.3.4.202502251048'>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Plugin Dependencies Explorer'/>
+        <property name='org.eclipse.equinox.p2.description' value='Project provides both command line and Eclipse UI for static package, plugin and feature dependencies analysis (the dependencies are read from MANIFEST.MF and feature.xml files).'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/plugindependencies/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.update.feature.plugin' value='org.eclipselabs.plugindependencies.ui'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.jar' version='1.3.4.202502251048'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.eclipselabs.plugindependencies' version='1.3.4.202502251048'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.eclipselabs.plugindependencies' version='1.3.4.202502251048'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2025 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2025 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
       </copyright>
     </unit>
     <unit id='de.loskutov.eclipse.jdepend' version='1.2.4.202006062100' generation='2'>
@@ -388,42 +383,6 @@
           </instruction>
         </instructions>
       </touchpointData>
-    </unit>
-    <unit id='org.eclipselabs.plugindependencies.feature.jar' version='1.3.3.202301042029'>
-      <properties size='5'>
-        <property name='org.eclipse.equinox.p2.name' value='Plugin Dependencies Explorer'/>
-        <property name='org.eclipse.equinox.p2.description' value='Project provides both command line and Eclipse UI for static package, plugin and feature dependencies analysis (the dependencies are read from MANIFEST.MF and feature.xml files).'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/plugindependencies/wiki'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
-        <property name='org.eclipse.update.feature.plugin' value='org.eclipselabs.plugindependencies.ui'/>
-      </properties>
-      <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.jar' version='1.3.3.202301042029'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='org.eclipselabs.plugindependencies' version='1.3.3.202301042029'/>
-      </provides>
-      <filter>
-        (org.eclipse.update.install.features=true)
-      </filter>
-      <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='org.eclipselabs.plugindependencies' version='1.3.3.202301042029'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='zipped'>
-            true
-          </instruction>
-        </instructions>
-      </touchpointData>
-      <licenses size='1'>
-        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
-          Copyright (c) 2004 - 2022 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
-        </license>
-      </licenses>
-      <copyright uri='..' url='..'>
-        Copyright (c) 2004-2022 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
-      </copyright>
     </unit>
     <unit id='AnyEditTools.feature.group' version='2.7.3.202502241151' singleton='false'>
       <update id='AnyEditTools.feature.group' range='[0.0.0,2.7.3.202502241151)' severity='0'/>
@@ -689,6 +648,24 @@
         Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
       </copyright>
     </unit>
+    <unit id='file:/data/git/plugins/scripts/../published_update_site/site.xml.Andrey_Loskutov_plugins' version='1.0.0.7B7S7kdIbh--7cIccIz0R8YQaa'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Eclipse plugins provided by Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.description' value='Eclipse plugins provided by Andrey Loskutov. More info at https://github.com/iloveeclipse/plugins/wiki'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/data/git/plugins/scripts/../published_update_site/site.xml.Andrey_Loskutov_plugins' version='1.0.0.7B7S7kdIbh--7cIccIz0R8YQaa'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.group' range='[1.3.4.202502251048,1.3.4.202502251048]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='FileSync.feature.group' range='[1.3.10.202006062100,1.3.10.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='JDepend4Eclipse.feature.group' range='[1.2.4.202006062100,1.2.4.202006062100]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='AnyEditTools.feature.group' range='[2.7.3.202502241151,2.7.3.202502241151]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='DataHierarchy.feature.group' range='[1.0.3.202006062100,1.0.3.202006062100]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
     <unit id='org.eclipselabs.plugindependencies.ui' version='1.3.2.202301042029' generation='2'>
       <update id='org.eclipselabs.plugindependencies.ui' range='[0.0.0,1.3.2.202301042029)' severity='0'/>
       <properties size='4'>
@@ -798,6 +775,47 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='org.eclipselabs.plugindependencies.feature.group' version='1.3.4.202502251048' singleton='false'>
+      <update id='org.eclipselabs.plugindependencies.feature.group' range='[0.0.0,1.3.4.202502251048)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='Plugin Dependencies Explorer'/>
+        <property name='org.eclipse.equinox.p2.description' value='Project provides both command line and Eclipse UI for static package, plugin and feature dependencies analysis (the dependencies are read from MANIFEST.MF and feature.xml files).'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='https://github.com/iloveeclipse/plugindependencies/wiki'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andrey Loskutov'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.group' version='1.3.4.202502251048'/>
+      </provides>
+      <requires size='5'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.ui.ide' range='3.9.0'>
+          <filter>
+            (!(org.eclipse.equinox.p2.exclude.import=true))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipse.pde.feature.group' range='3.9.0'>
+          <filter>
+            (!(org.eclipse.equinox.p2.exclude.import=true))
+          </filter>
+        </required>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.core' range='[1.3.5,1.3.5]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.ui' range='[1.3.2.202301042029,1.3.2.202301042029]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.jar' range='[1.3.4.202502251048,1.3.4.202502251048]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='https://www.eclipse.org/legal/epl-2.0/' url='https://www.eclipse.org/legal/epl-2.0/'>
+          Copyright (c) 2004 - 2025 Andrey Loskutov, licensed under the Eclipse Public License 2.0.
+        </license>
+      </licenses>
+      <copyright uri='..' url='..'>
+        Copyright (c) 2004-2025 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
+      </copyright>
+    </unit>
     <unit id='AnyEditTools.feature.jar' version='2.7.3.202502241151'>
       <properties size='5'>
         <property name='org.eclipse.equinox.p2.name' value='AnyEditTools'/>
@@ -869,24 +887,6 @@
       <copyright uri='..' url='..'>
         Copyright (c) 2004-2020 by Andrey Loskutov Loskutov@gmx.de&#xA;   All rights reserved.
       </copyright>
-    </unit>
-    <unit id='file:/data/git/plugins/scripts/../published_update_site/site.xml.Andrey_Loskutov_plugins' version='1.0.0.7B7S7idIbh--7cIcYIyN6aQWc'>
-      <properties size='3'>
-        <property name='org.eclipse.equinox.p2.name' value='Eclipse plugins provided by Andrey Loskutov'/>
-        <property name='org.eclipse.equinox.p2.description' value='Eclipse plugins provided by Andrey Loskutov. More info at https://github.com/iloveeclipse/plugins/wiki'/>
-        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/data/git/plugins/scripts/../published_update_site/site.xml.Andrey_Loskutov_plugins' version='1.0.0.7B7S7idIbh--7cIcYIyN6aQWc'/>
-      </provides>
-      <requires size='5'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.eclipselabs.plugindependencies.feature.group' range='[1.3.3.202301042029,1.3.3.202301042029]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='FileSync.feature.group' range='[1.3.10.202006062100,1.3.10.202006062100]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='JDepend4Eclipse.feature.group' range='[1.2.4.202006062100,1.2.4.202006062100]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='AnyEditTools.feature.group' range='[2.7.3.202502241151,2.7.3.202502241151]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='DataHierarchy.feature.group' range='[1.0.3.202006062100,1.0.3.202006062100]'/>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
     </unit>
     <unit id='de.loskutov.anyedit.AnyEditTools' version='2.7.3.202502241151' generation='2'>
       <update id='de.loskutov.anyedit.AnyEditTools' range='[0.0.0,2.7.3.202502241151)' severity='0'/>
