@@ -66,7 +66,15 @@ echo -e "Copy binaries..."
 cp -r ${src}/binary ${trg}/
 
 
-eclipse="/data2/SDK/eclipse4.35/eclipse/eclipse"
+eclipseLocation=/tmp/sdk_${USER}_temp
+rm -rf $eclipseLocation
+
+SDK_ROOT=/localworkspaces/.cache/artifactory/eclipse/eclipse_sdk/
+STABLE_SDK=`find $SDK_ROOT -name "4.38*" | sort | head -n 1`
+echo "Will use $STABLE_SDK"
+cp -r $STABLE_SDK/eclipse_sdk ${eclipseLocation}
+
+eclipse=$eclipseLocation/eclipse
 
 if [[ ! -x "${eclipse}" ]] ; then
   echo -e "Missing file: ${eclipse}"
